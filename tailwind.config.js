@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      'sm': { 'max': '767px' },
+      // => @media (max-width: 767px) { ... },
+    },
   },
   plugins: [],
+  prefix: 'tw-',
 }
