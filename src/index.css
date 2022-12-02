@@ -1,5 +1,7 @@
 @config "./../tailwind.config.js";
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +10,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    font-family: 'DM Sans';       
+}
+
+@layer components {
+    .Text-title {
+        @apply tw-text-orange-default;
+    }
 }
