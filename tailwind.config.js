@@ -14,8 +14,8 @@ module.exports = {
       white: '#FFFFFF',
       grey: {
         default: '#F8F8F8',
-        light: '#000033',
-        medium: '#000066'
+        light: '#00000033',
+        medium: '#00000066'
       },
       orange: {
         default: '#FF9952',
@@ -33,5 +33,4 @@ module.exports = {
     },
   },
   plugins: [],
-  prefix: 'tw-',
 }

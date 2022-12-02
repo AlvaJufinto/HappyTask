@@ -6,14 +6,13 @@ interface IState {
 }
 
 export enum TextType {
-    Title = "title",
-    Small = "small",
+    Title = "Text-title",
+    Small = "Text-small",
 }
-
 
 const Text: FC<IState> = ({ text, textType }) => {
     return (
-        <div className={`Text-${textType}`}>
+        <div className={textType}>
             {text}
         </div>
     );
