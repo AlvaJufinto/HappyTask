@@ -32,5 +32,6 @@ module.exports = {
       poppins: ['DM Sans', 'sans-serif'],
     },
   },
+  
   plugins: [],
 }
