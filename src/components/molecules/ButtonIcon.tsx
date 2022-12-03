@@ -4,6 +4,7 @@ import Image from '../atoms/Image';
 interface IState {
     buttonIconSrc: string;
     buttonIcon?: string,
+    onClickFunction?: () => void,
 }
 
 export enum ButtonIconType {
@@ -11,12 +12,11 @@ export enum ButtonIconType {
     Custom = "custom",
 }
 
-const ButtonIcon: FC<IState> = ({ buttonIconSrc, buttonIcon = ButtonIconType.Add }) => {
+const ButtonIcon: FC<IState> = ({ buttonIconSrc, buttonIcon = ButtonIconType.Add, onClickFunction }) => {
 
     return (
-        <button className='bg-blue-500 focus:bg-blue-700 text-black font-bold py-2 px-4 rounded border-1 focus:ring'>
-            adssdadsasd
-            {/* <Image imageSrc={buttonIconSrc}  /> */}
+        <button onClick={onClickFunction} className='bg-white grid place-content-center hover:bg-grey-default text-black h-[44px] w-[44px] rounded-full focus:ring'>
+            <Image imageSrc={buttonIconSrc}  />
         </button>
     );
 }

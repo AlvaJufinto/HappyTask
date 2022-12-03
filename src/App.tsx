@@ -17,7 +17,7 @@ function App() {
       <Checkbox />
       <Image imageSrc={LogoHC} imageWidth="42px" />
       <Image imageSrc={SettingIcon} imageWidth="42px" />
-      <ButtonIcon buttonIconSrc={TrashIcon} />
+      <ButtonIcon buttonIconSrc={TrashIcon} onClickFunction={() => alert("sup nig")} />
     </div>
   );
 }
