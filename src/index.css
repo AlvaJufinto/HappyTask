@@ -1,6 +1,11 @@
 @config "./../tailwind.config.js";
 
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* Import components */
+@import "./styles/text.css";
+@import "./styles/checkbox.css";
 
 @tailwind base;
 @tailwind components;
@@ -13,12 +18,4 @@
     font-family: 'DM Sans';       
 }
 
-@layer components {
-    .Text-title {
-        @apply text-black text-[22px] font-[500];
-    }
 
-    .Text-small {
-        @apply text-grey-medium text-[14px] font-[400];
-    }
-}

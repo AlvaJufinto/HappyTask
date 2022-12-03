@@ -1,0 +1,33 @@
+@tailwind components;
+
+.CheckboxContainer-label {
+    @apply border-solid border cursor-pointer h-10 absolute w-10;
+    background-color: rgba(255, 229, 211, 1);
+    border-color: rgba(255, 153, 82, 1);
+    border-radius: 50%;
+}
+
+.CheckboxContainer-label:after {
+  @apply border-white border-solid border-b-2 border-l-2 h-2 opacity-0 absolute w-5;
+  border-width: 2px;
+  content: "";
+  left: 22%;
+  top: 35%;
+  transform: rotate(-45deg);
+}
+
+.CheckboxContainer-checkbox {
+    display: none;
+}
+
+.CheckboxContainer-checkbox:checked + .CheckboxContainer-label {
+  @apply border-solid border;
+  background-color: rgba(211, 255, 221, 1);
+  border-color: rgba(82, 255, 120, 1);
+}
+
+.CheckboxContainer-checkbox:checked + .CheckboxContainer-label:after {
+  @apply border-solid border-t-0 border-r-0 border-b-2 border-l-2 opacity-100;
+  border-color: rgba(82, 255, 120, 1);
+  border-width: 0px 0px 2px 2px;
+}

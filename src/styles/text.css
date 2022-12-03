@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+    .Text-title {
+        @apply text-black text-[22px] font-[500];
+    }
+
+    .Text-small {
+        @apply text-grey-medium text-[14px] font-[400];
+    }
+}
