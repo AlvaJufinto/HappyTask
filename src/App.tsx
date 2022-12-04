@@ -8,6 +8,7 @@ import ButtonIcon from "./components/molecules/ButtonIcon";
 import TrashIcon from "./assets/icon/trash-icon.svg";
 
 import { TextType } from "./components/atoms/Text";
+import { ButtonIconType } from "./components/molecules/ButtonIcon";
 
 function App() {
   return (
