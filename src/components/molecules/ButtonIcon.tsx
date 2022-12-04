@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from '../atoms/Image';
 
-import AddIcon from "../../assets/icon/plus-icon.svg"
+import AddIcon from "./../../assets/icon/plus-icon.svg"
 
 interface IState {
     buttonIconSrc: string;
