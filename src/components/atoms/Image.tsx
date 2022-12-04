@@ -14,6 +14,7 @@ const Image: FC<IState> = ({ imageSrc, imageWidth, imageHeight, borderRadius }) 
       src={imageSrc}
       width={imageWidth}
       height={imageHeight}
+      alt={imageSrc.split('/')[imageSrc.split('/').length - 1] || "Image-alt not found"}
     />
   );
 }
