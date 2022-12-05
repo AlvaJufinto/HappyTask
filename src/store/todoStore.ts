@@ -33,7 +33,13 @@ export const useStore = create<TodoState>((set) => ({
         {
             id: 3,
             title: 'MTK : Belajar PAS',
-            description: "Pak Dadang marah",
+            description: "Pak Dadang marah gara2 jerman kalah",
+            isDone: false,
+        },
+        {
+            id: 4,
+            title: 'LKS Bhs Indo',
+            description: "Selamat pagi, semangat pagi",
             isDone: false,
         }
     ],
@@ -47,7 +53,6 @@ export const useStore = create<TodoState>((set) => ({
         }));
     },
     toggleDoneState: (id) => {
-
         set((state) => ({
             todos: state.todos.map((todo) =>
               todo.id === id

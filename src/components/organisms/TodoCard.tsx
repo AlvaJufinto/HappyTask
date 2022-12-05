@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { useStore } from '../../store/todoStore';
 
@@ -20,20 +20,23 @@ export interface IState {
 }
 
 const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
-    const { todos, removeTodo, toggleDoneState } = useStore();
+    const [isFaded, setIsFaded] = useState(false);
+    const { removeTodo, toggleDoneState } = useStore();
 
     const removeHandler = () => {
-        removeTodo(id);
-        console.log('delete', id);
+        setIsFaded(true); 
+        setTimeout(() => {
+            removeTodo(id);
+            setIsFaded(false);
+        }, 300)
     }
 
     const checkboxHandler = () => {
         toggleDoneState(id);
-        console.log(id);
     }
     
     return (
-        <div className="flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] min-w-[365px] min-h-[225px]">
+        <div className={`flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] min-w-[365px] min-h-[225px] transition ease-in-out  duration-300 ${isFaded ? 'opacity-0 translate-y-[30px]' : ''}`}>
             <div>
                 <Text text={title} textType={TextType.Title} />
                 <Text text={description} textType={TextType.Small} />

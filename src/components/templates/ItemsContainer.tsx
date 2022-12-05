@@ -1,40 +1,26 @@
-import { FC } from 'react';
-
-import { useStore } from '../../store/todoStore';
+import { FC, ReactNode } from 'react';
 
 import Text from '../atoms/Text';
 import TodoCard from "../organisms/TodoCard";
 import NewTodoTask from '../organisms/NewTodoTask';
 
+import { Todo } from '../../store/todoStore';
 import { TextType } from "../atoms/Text";
 
+
 interface IState {
-    title?: string;
+    title: string;
+    children: ReactNode;
 }
 
 
-const TodoContainer: FC<IState> = () => {
-    const { removeTodo, todos } = useStore();
+const TodoContainer: FC<IState> = ({ title, children }) => {
 
     return (
-        <div className='TodoContainer bg-grey-default mb-[10px]'>
-            <Text text="To Do" textType={TextType.Title} /> 
+        <div className='TodoContainer bg-grey-default mb-[50px]'>
+            <Text text={title} textType={TextType.Title} /> 
             <div className='flex gap-[40px] flex-wrap'>
-                {
-                    todos.map((task, i) => (
-                        <div>
-                        <TodoCard id={task.id} title={task.title} description={task.description} isDone={task.isDone} key={`${i}-${task.title}`} />
-                        </div>
-                    ))
-                }
-                <NewTodoTask />
-                {/* <TodoCard />
-                <TodoCard />
-                <TodoCard />
-                <TodoCard />
-                <TodoCard />
-                <TodoCard /> */}
-
+                {children}
             </div>
         </div>
     );
