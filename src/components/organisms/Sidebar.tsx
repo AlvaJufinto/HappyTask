@@ -12,7 +12,7 @@ import SettingIcon from "./../../assets/icon/setting-icon.svg";
 
 const SideBar: FC= () => {
     return (
-      <div className='Sidebar h-[100vh] w-[100px] rounded-r-[20px] bg-white py-[15px] flex flex-col gap-[22px] items-center'>
+      <div className='Sidebar fixed top-0 left-0 z-50 h-[100%] w-[100px] rounded-r-[20px] bg-white py-[15px] flex flex-col gap-[22px] px-[13px] items-center'>
         <div className="mt-[25px]">
             <Image imageSrc={LogoHC} imageWidth="42px" />
         </div>

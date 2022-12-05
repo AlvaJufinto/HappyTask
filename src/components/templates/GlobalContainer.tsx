@@ -9,7 +9,7 @@ const GlobalContainer: FC<IState>= ({ sidebar, children }) => {
     return (
       <div className='GlobalContainer h-[100vh] w-[100vw] bg-grey-default flex'>
         {sidebar}
-        <div className='pl-[30px] pt-[66px]'>
+        <div className='pl-[130px] pt-[66px]'>
             {children}
         </div>
       </div>

@@ -15,12 +15,12 @@ const TodoContainer: FC<IState> = () => {
             <Text text="To Do" textType={TextType.Title} /> 
             <div className='flex gap-[40px] flex-wrap'>
                 <TodoCard />
+                {/* <TodoCard />
                 <TodoCard />
                 <TodoCard />
                 <TodoCard />
                 <TodoCard />
-                <TodoCard />
-                <TodoCard />
+                <TodoCard /> */}
 
             </div>
         </div>

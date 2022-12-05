@@ -13,7 +13,7 @@ import EditIcon from "./../../assets/icon/edit-icon.svg";
 
 const TodoCard: FC   = () => {
     return (
-        <div className="flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] min-w-[365px] min-h-[225px]">
+        <div className="flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] min-w-[365px] min-h-[225px]   ">
             <div>
                 <Text text="SaaS : Membuat Program" textType={TextType.Title} />
                 <Text text="Tugas Bapa Danial Ahadian" textType={TextType.Small} />
