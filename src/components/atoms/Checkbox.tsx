@@ -1,20 +1,21 @@
 import { useState, FC } from 'react';
 
 interface IState {
+    id?: number;
     isChecked?: boolean;
+    onClickFunction?: () => void;
 }
 
-export enum CheckboxType {
-    Title = "Checkbox-title",
-    Small = "Checkbox-small",
-}
-
-const Checkbox: FC<IState> = ({ isChecked: isCheckedState = false }) => {
+const Checkbox: FC<IState> = ({ id, isChecked: isCheckedState = false, onClickFunction }) => {
     const [isChecked, setIsChecked] = useState(isCheckedState);
 
-    return (
-        <div className="CheckboxContainer">
-            <input className='CheckboxContainer-checkbox' type="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} id="checkbox" />
+    const checkboxOnCheck = () => {
+        console.log(id)
+    }
+
+    return (    
+        <div className="CheckboxContainer" onClick={onClickFunction}>
+            <input className='CheckboxContainer-checkbox' type="checkbox" onChange={checkboxOnCheck} checked={isCheckedState} id="checkbox" />
             <label className='CheckboxContainer-label' htmlFor="checkbox"></label>
         </div>
     );

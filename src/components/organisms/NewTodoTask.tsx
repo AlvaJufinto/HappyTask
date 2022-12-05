@@ -10,7 +10,6 @@ import { ButtonIconType } from "./../molecules/ButtonIcon";
 import TrashIcon from "./../../assets/icon/trash-icon.svg";
 import EditIcon from "./../../assets/icon/edit-icon.svg";
 
-
 const NewTodoTask: FC = () => {
     return (
         <div className="grid border-[1px] border-black bg-white rounded-[10px] p-[35px] gap-[45px] min-w-[365px] min-h-[225px]">
