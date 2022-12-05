@@ -4,8 +4,8 @@ import Image from '../atoms/Image';
 import AddIcon from "./../../assets/icon/plus-icon.svg"
 
 interface IState {
-    buttonIconSrc: string;
-    buttonIconType?: string,
+    buttonIconType?: ButtonIconType,
+    buttonIconSrc?: string | any;
     onClickFunction?: () => void,
 }
 
@@ -18,7 +18,7 @@ const ButtonIcon: FC<IState> = ({ buttonIconSrc, buttonIconType = ButtonIconType
     switch(buttonIconType) {
         case 'add':
             return (
-                <button onClick={onClickFunction} className='bg-white grid place-content-center hover:bg-grey-default rounded-[10px] text-black h-[44px] w-[44px] focus:ring'>
+                <button onClick={onClickFunction} className='bg-white grid place-content-center hover:opacity-50 rounded-[10px] text-black h-[44px] w-[44px] focus:ring'>
                     <Image imageSrc={AddIcon} imageWidth="42px" />
                 </button>
             )

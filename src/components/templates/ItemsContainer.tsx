@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 
 import Text from '../atoms/Text';
 import TodoCard from "../organisms/TodoCard";
+import NewTodoTask from '../organisms/NewTodoTask';
 
 import { TextType } from "../atoms/Text";
 
@@ -15,6 +16,7 @@ const TodoContainer: FC<IState> = () => {
             <Text text="To Do" textType={TextType.Title} /> 
             <div className='flex gap-[40px] flex-wrap'>
                 <TodoCard />
+                <NewTodoTask />
                 {/* <TodoCard />
                 <TodoCard />
                 <TodoCard />

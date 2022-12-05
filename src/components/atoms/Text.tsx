@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 interface IState {
     text: string,
-    textType: string,
+    textType: TextType,
 }
 
 export enum TextType {
