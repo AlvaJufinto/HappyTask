@@ -2,7 +2,7 @@ import create from "zustand";
 import { v4 as uuidv4 } from "uuid";
 
 export interface Todo {
-    id: string;
+    id: number;
     title: string;
     description: string;
     isDone: boolean;
@@ -15,35 +15,34 @@ interface TodoState {
     toggleDoneState: (id: string) => void;
 }
 
-export const useStore = create<TodoState>((set: any) => ({
-    // initial state
-    todos: [],
-    // methods for manipulating state
-    addTodo: (title: string, description: string) => {
-        set((state: any) => ({
-            todos: [
-                ...state.todos,
-                {
-                    id: uuidv4(),
-                    title,
-                    description,
-                    isDone: false,
-                } as Todo,
-            ],
-        }));
+export const useStore = create<TodoState>(set => ({
+    todos: [
+        {
+            id: 32134,
+            title: 'SaaS : Membuat Program',
+            description: "Tugasnya pak danial",
+            isDone: false,
+        },
+        {
+            id: 21234,
+            title: 'IaaS : Membuat Modul',
+            description: "Tugasnya bu kuri ternyata",
+            isDone: false,
+        },
+        {
+            id: 54622,
+            title: 'MTK : Belajar PAS',
+            description: "Pak Dadang marah",
+            isDone: false,
+        }
+    ],
+    addTodo: () => {
+
     },
-    removeTodo: (id: number) => {
-        set((state: any) => ({
-            todos: state.todos.filter((todo: any) => todo.id !== id),
-        }));
+    removeTodo: () => {
+        
     },
-    toggleDoneState: (id: number) => {
-        set((state: any) => ({
-            todos: state.todos.map((todo: any) =>
-                todo.id === id
-                    ? ({ ...todo, completed: !todo.completed } as Todo)
-                    : todo
-            ),
-        }));
-    },
-}));
+    toggleDoneState: () => {
+        
+    }
+}))
