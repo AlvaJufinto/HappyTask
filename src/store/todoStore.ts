@@ -12,7 +12,7 @@ interface TodoState {
     todos: Todo[];
     addTodo: (description: string) => void;
     removeTodo: (id: string) => void;
-    toggleCompletedState: (id: string) => void;
+    toggleDoneState: (id: string) => void;
 }
 
 export const useStore = create<TodoState>((set: any) => ({
@@ -37,7 +37,7 @@ export const useStore = create<TodoState>((set: any) => ({
             todos: state.todos.filter((todo: any) => todo.id !== id),
         }));
     },
-    toggleCompletedState: (id: number) => {
+    toggleDoneState: (id: number) => {
         set((state: any) => ({
             todos: state.todos.map((todo: any) =>
                 todo.id === id
