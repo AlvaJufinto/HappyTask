@@ -6,16 +6,11 @@ interface IState {
     onClickFunction?: () => void;
 }
 
-const Checkbox: FC<IState> = ({ id, isChecked: isCheckedState = false, onClickFunction }) => {
-    const [isChecked, setIsChecked] = useState(isCheckedState);
-
-    const checkboxOnCheck = () => {
-        console.log(id)
-    }
+const Checkbox: FC<IState> = ({ id, isChecked, onClickFunction }) => {
 
     return (    
         <div className="CheckboxContainer" onClick={onClickFunction}>
-            <input className='CheckboxContainer-checkbox' type="checkbox" onChange={checkboxOnCheck} checked={isCheckedState} id="checkbox" />
+            <input className='CheckboxContainer-checkbox' type="checkbox" checked={isChecked} id="checkbox" disabled />
             <label className='CheckboxContainer-label' htmlFor="checkbox"></label>
         </div>
     );

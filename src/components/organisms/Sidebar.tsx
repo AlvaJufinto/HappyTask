@@ -22,7 +22,6 @@ const SideBar: FC= () => {
             <LinkIcon LinkIconSrc={HomeIcon} LinkTo='/' />
             <LinkIcon LinkIconSrc={CalendarIcon} LinkTo='/' />
             <LinkIcon LinkIconSrc={SettingIcon} LinkTo='/' />
-
         </div>
       </div>
     );

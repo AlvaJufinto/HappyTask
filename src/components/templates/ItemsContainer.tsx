@@ -1,4 +1,6 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
+
+import { useStore } from '../../store/todoStore';
 
 import Text from '../atoms/Text';
 import TodoCard from "../organisms/TodoCard";
@@ -10,35 +12,19 @@ interface IState {
     title?: string;
 }
 
-const tasks = [
-    {
-        id: 32134,
-        title: 'SaaS : Membuat Program',
-        description: "Tugasnya pak danial",
-        isDone: false,
-    },
-    {
-        id: 21234,
-        title: 'IaaS : Membuat Modul',
-        description: "Tugasnya bu kuri ternyata",
-        isDone: false,
-    },
-    {
-        id: 54622,
-        title: 'MTK : Belajar PAS',
-        description: "Pak Dadang marah",
-        isDone: false,
-    }
-]
 
 const TodoContainer: FC<IState> = () => {
+    const { removeTodo, todos } = useStore();
+
     return (
         <div className='TodoContainer bg-grey-default mb-[10px]'>
             <Text text="To Do" textType={TextType.Title} /> 
             <div className='flex gap-[40px] flex-wrap'>
                 {
-                    tasks.map((task, i) => (
+                    todos.map((task, i) => (
+                        <div>
                         <TodoCard id={task.id} title={task.title} description={task.description} isDone={task.isDone} key={`${i}-${task.title}`} />
+                        </div>
                     ))
                 }
                 <NewTodoTask />
