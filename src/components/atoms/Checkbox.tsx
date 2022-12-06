@@ -1,12 +1,11 @@
 import { useState, FC } from 'react';
 
 interface IState {
-    id?: number;
     isChecked?: boolean;
     onClickFunction?: () => void;
 }
 
-const Checkbox: FC<IState> = ({ id, isChecked, onClickFunction }) => {
+const Checkbox: FC<IState> = ({ isChecked, onClickFunction }) => {
 
     return (    
         <div className="CheckboxContainer" onClick={onClickFunction}>

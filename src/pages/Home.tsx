@@ -14,9 +14,10 @@ export const Home: FC = () => {
     <GlobalContainer sidebar={<SideBar />}>
       <ItemsContainer title="Todo">
         {
-          todos?.map((task, i) => (
-            <TodoCard id={task.id} title={task.title} description={task.description} isDone={task.isDone} key={`${i}-${task.title}`} />
-          ))
+          todos?.map((todo, i) => {
+            return !todo.isDone &&
+              <TodoCard id={todo.id} title={todo.title} description={todo.description} isDone={todo.isDone} key={`${i}-${todo.title}`} />
+          })
         }
         <NewTodoTask />         
       </ItemsContainer>

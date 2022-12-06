@@ -13,7 +13,7 @@ import TrashIcon from "./../../assets/icon/trash-icon.svg";
 import EditIcon from "./../../assets/icon/edit-icon.svg";
 
 export interface IState {
-    id: number;
+    id: string;
     title: string;
     description: string;
     isDone: boolean;
@@ -32,7 +32,11 @@ const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
     }
 
     const checkboxHandler = () => {
-        toggleDoneState(id);
+        setIsFaded(true);
+        setTimeout(() => {
+            toggleDoneState(id);
+            setIsFaded(false);
+        }, 300);
     }
     
     return (
@@ -43,7 +47,6 @@ const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
             </div>
             <div className="flex justify-between">
                 <Checkbox 
-                    id={id}
                     isChecked={isDone} 
                     onClickFunction={checkboxHandler} /> 
                 <div className="flex gap-[15px]">

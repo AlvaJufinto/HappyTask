@@ -8,7 +8,7 @@ interface IState {
     buttonSrc?: string | any;
     text?: string;
     applyClass?: string;
-    onClickFunction?: () => void,
+    onClickFunction?: (e: any) => void,
 }
 
 export enum ButtonType {
@@ -33,7 +33,7 @@ const Button: FC<IState> = ({ buttonSrc, buttonType = ButtonType.Add, text, appl
             );
         default:
             return (
-                <button className={`bg-white grid place-content-center h-[40px] w-[140px] rounded-full focus:ring ${applyClass}`} onClick={onClickFunction}>
+                <button onClick={onClickFunction} className={`bg-white grid place-content-center h-[40px] w-[140px] rounded-full focus:ring ${applyClass}`}>
                     {text}
                 </button>
             )
