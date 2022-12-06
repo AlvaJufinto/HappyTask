@@ -37,7 +37,7 @@ export const useStore = create<TodoState>((set) => ({
             setLocalStorage("collection", todos);
             
             return { 
-                todos: todos
+                todos
             }
         });
     },
@@ -47,7 +47,7 @@ export const useStore = create<TodoState>((set) => ({
             setLocalStorage("collection", todos);
     
             return {
-                todos: todos
+                todos
             }
         });
     },
@@ -61,7 +61,7 @@ export const useStore = create<TodoState>((set) => ({
             setLocalStorage("collection", todos);
 
             return {
-                todos: todos
+                todos
             }
         });
     },

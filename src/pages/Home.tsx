@@ -12,7 +12,7 @@ export const Home: FC = () => {
 
   return (
     <GlobalContainer sidebar={<SideBar />}>
-      <ItemsContainer title="Todo">
+      <ItemsContainer title="To Do">
         {
           todos?.map((todo, i) => {
             return !todo.isDone &&
