@@ -10,39 +10,55 @@ export interface Todo {
 
 interface TodoState {
     todos: Todo[];
-    addTodo: (description: string) => void;
-    removeTodo: (id: string) => void;
-    toggleDoneState: (id: string) => void;
+    addTodo: (title: string, description: string) => void;
+    removeTodo: (id: number) => void;
+    toggleDoneState: (id: number) => void;
 }
 
-export const useStore = create<TodoState>(set => ({
+export const useStore = create<TodoState>((set) => ({
+    // initial state
     todos: [
         {
-            id: 32134,
+            id: 1,
             title: 'SaaS : Membuat Program',
             description: "Tugasnya pak danial",
             isDone: false,
         },
         {
-            id: 21234,
+            id: 2,
             title: 'IaaS : Membuat Modul',
             description: "Tugasnya bu kuri ternyata",
             isDone: false,
         },
         {
-            id: 54622,
+            id: 3,
             title: 'MTK : Belajar PAS',
-            description: "Pak Dadang marah",
+            description: "Pak Dadang marah gara2 jerman kalah",
+            isDone: false,
+        },
+        {
+            id: 4,
+            title: 'LKS Bhs Indo',
+            description: "Selamat pagi, semangat pagi",
             isDone: false,
         }
     ],
+    // methods for manipulating state
     addTodo: () => {
 
     },
-    removeTodo: () => {
-        
+    removeTodo: (id) => {
+        set((state) => ({
+            todos: state.todos.filter((todo) => todo.id !== id),
+        }));
     },
-    toggleDoneState: () => {
-        
-    }
+    toggleDoneState: (id) => {
+        set((state) => ({
+            todos: state.todos.map((todo) =>
+              todo.id === id
+                ? ({ ...todo, isDone: !todo.isDone })
+                : todo
+            ),
+        }));
+    },
 }))

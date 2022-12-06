@@ -1,24 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import SideBar from "./components/organisms/Sidebar";
-import GlobalContainer from "./components/templates/GlobalContainer";
-import ItemsContainer from "./components/templates/ItemsContainer";
+import { useStore } from "./store/todoStore";
 
-import { TextType } from "./components/atoms/Text";
+import Home from "./pages/Home";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
 ]);
-
-function App() {
-  return (
-    <GlobalContainer sidebar={<SideBar />}>
-      <ItemsContainer title="Todo" />
-    </GlobalContainer>
-  );
-}
-
-export default App;

@@ -21,4 +21,10 @@
     font-family: 'DM Sans';       
 }
 
+body {
+    max-width: 100vw;
+    background-color: #F8F8F8;
+    min-height: 110vh;
+    overflow-x: hidden;
+}
 

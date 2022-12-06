@@ -6,10 +6,10 @@ interface IState {
 }
 
 const GlobalContainer: FC<IState>= ({ sidebar, children }) => {
-    return (
-      <div className='GlobalContainer h-[100vh] w-[100vw] bg-grey-default flex'>
+    return ( 
+      <div className='GlobalContainer h-[100vh]  pb-[150px] bg-grey-default flex'>
         {sidebar}
-        <div className='pl-[130px] pt-[66px]'>
+        <div className='pl-[120px] pt-[65px] pr-[0px]'>
             {children}
         </div>
       </div>
