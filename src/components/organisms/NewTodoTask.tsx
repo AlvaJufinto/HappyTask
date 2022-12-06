@@ -46,9 +46,9 @@ const NewTodoTask: FC = () => {
                         <Textbox placeholder="Title" value={title} onChangeFunction={(e: any) => setTitle(e.target.value)}  />
                             <Textbox placeholder="Description" applyClass={`text-[14px] ${TextType.Small}`} value={description} onChangeFunction={(e: any) => setDescription(e.target.value)} />
                     </div>
-                    <div className="flex justify-between">
-                        <Button buttonType={ButtonType.OnlyText} text="Save" applyClass="hover:bg-grey-default border-[1px] bg-black hover:text-black text-white" onClickFunction={saveHandler} />
-                            <Button buttonType={ButtonType.OnlyText} text="Cancel" applyClass="border-[1px] bg-white" onClickFunction={cancelHandler} />
+                    <div className="flex sm:flex-col sm:gap-[10px] justify-between">
+                        <Button buttonType={ButtonType.OnlyText} text="Save" applyClass="hover:bg-grey-default border-[1px] bg-black hover:text-black text-white sm:w-[100%] sm:h-[50px]" onClickFunction={saveHandler} />
+                        <Button buttonType={ButtonType.OnlyText} text="Cancel" applyClass="border-[1px] bg-white sm:w-[100%] sm:h-[50px]" onClickFunction={cancelHandler} />
                     </div>  
                 </form>
             }
