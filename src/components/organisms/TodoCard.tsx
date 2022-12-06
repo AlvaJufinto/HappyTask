@@ -40,7 +40,7 @@ const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
     }
     
     return (
-        <div className={`flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] w-[365px] max-w-[85%] min-h-[225px] transition ease-in-out  duration-300 ${isFaded ? 'opacity-0 translate-y-[30px]' : ''}`}>
+        <div className={`flex flex-col bg-white rounded-[10px] p-[35px] gap-[45px] w-[365px] max-w-[95%] min-h-[225px] transition ease-in-out  duration-300 ${isFaded ? 'opacity-0 translate-y-[30px]' : ''}`}>
             <div>
                 <Text text={title} textType={TextType.Title} />
                 <Text text={description} textType={TextType.Small} />

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { useStore } from "./../store/todoStore";
 
 import SideBar from "./../components/organisms/Sidebar";
-import GlobalContainer from "./../components/templates/GlobalContainer";
+import GlobalContainer from "../components/templates/GlobalContainer";
 import ItemsContainer from "./../components/templates/ItemsContainer";
 import TodoCard from "./../components/organisms/TodoCard";
 import NewTodoTask from "./../components/organisms/NewTodoTask";

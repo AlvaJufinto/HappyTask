@@ -31,17 +31,17 @@ const NewTodoTask: FC = () => {
     }
 
     return (
-        <div className="border-[1px] border-black bg-white rounded-[10px] p-[35px] min-w-[365px] max-w-[85%] min-h-[225px]">
+        <div className="border-[1px] border-black bg-white rounded-[10px] p-[35px] w-[365px] max-w-[95%] min-h-[225px]">
             {
                 !isActive && 
-                <div className="flex flex-col gap-[20px] h-[100%] w-[100%] justify-center items-center">
+                <div className="flex flex-col gap-[20px] h-[100%]  justify-center items-center">
                     <Text text="Make New Task" textType={TextType.Title} />
                     <Button buttonType={ButtonType.Add} onClickFunction={() => setIsActive(!isActive)} />
                 </div>
             }
             {
                 isActive &&
-                <form className="flex flex-col justify-between gap-[20px] h-[100%] w-[100%]">
+                <form className="flex flex-col justify-between gap-[20px] h-[100%] ">
                     <div className="flex flex-col gap-[20px]">
                         <Textbox placeholder="Title" value={title} onChangeFunction={(e: any) => setTitle(e.target.value)}  />
                             <Textbox placeholder="Description" applyClass={`text-[14px] ${TextType.Small}`} value={description} onChangeFunction={(e: any) => setDescription(e.target.value)} />
