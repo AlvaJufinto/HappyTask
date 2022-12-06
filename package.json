@@ -2,7 +2,9 @@
   "name": "react-ts-todo",
   "version": "0.1.0",
   "private": true,
-  "main": "electron/main.ts",
+  "main": "public/electron.js",
+  "description": "hadeh cok",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -12,7 +14,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "concurrently": "^7.6.0",
-    "electron": "^22.0.0",
+    "electron-is-dev": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.4",
@@ -25,10 +27,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=/ react-scripts build",
+    "build-electron": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron:start": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron:start": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "npm run build-electron && electron-builder build --publish never",
+    "electron:build:all": "npm run build-electron && electron-builder build --publish never -mwl",
+    "electron-dev": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build --em.main=build/electron.js",
+    "preelectron-pack": "npm build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,7 +59,19 @@
   "devDependencies": {
     "@types/uuid": "^9.0.0",
     "autoprefixer": "^10.4.13",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
     "postcss": "^8.4.19",
     "tailwindcss": "^3.2.4"
+  },
+  "build": {
+    "appId": "com.example.electron-cra",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
