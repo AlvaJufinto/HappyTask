@@ -16,7 +16,6 @@ interface TodoState {
     toggleDoneState: (id: string) => void;
 }
 
-
 const getLocalStorage = (key: string) => JSON.parse(window.localStorage.getItem(key) as any)
 const setLocalStorage = (key: string, value: Todo[]) => window.localStorage.setItem(key, JSON.stringify(value));
 
@@ -36,7 +35,7 @@ export const useStore = create<TodoState>((set) => ({
                 } as Todo,
             ]
             setLocalStorage("collection", todos);
-     
+            
             return { 
                 todos: todos
             }

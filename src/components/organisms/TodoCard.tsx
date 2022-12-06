@@ -20,6 +20,7 @@ export interface IState {
 }
 
 const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
+    const [isEdit, setIsEdit] = useState(false);
     const [isFaded, setIsFaded] = useState(false);
     const { removeTodo, toggleDoneState } = useStore();
 
@@ -52,10 +53,12 @@ const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
                 <div className="flex gap-[15px]">
                     <Button 
                         buttonSrc={TrashIcon} 
-                        buttonType={ButtonType.Custom} onClickFunction={removeHandler} />
+                        buttonType={ButtonType.Custom} 
+                        onClickFunction={removeHandler} />
                     <Button 
                         buttonSrc={EditIcon} 
-                        buttonType={ButtonType.Custom} />
+                        buttonType={ButtonType.Custom}
+                        onClickFunction={() => setIsEdit(!isEdit)} />
                 </div>
             </div>
         </div>
