@@ -4,18 +4,21 @@ import Image from '../atoms/Image';
 import AddIcon from "./../../assets/icon/plus-icon.svg"
 
 interface IState {
-    buttonIconType?: ButtonIconType,
-    buttonIconSrc?: string | any;
+    buttonType?: ButtonType,
+    buttonSrc?: string | any;
+    text?: string;
+    applyClass?: string;
     onClickFunction?: () => void,
 }
 
-export enum ButtonIconType {
+export enum ButtonType {
     Add = "add",
     Custom = "custom",
+    OnlyText= 'onlyText',
 }
 
-const ButtonIcon: FC<IState> = ({ buttonIconSrc, buttonIconType = ButtonIconType.Add, onClickFunction }) => {
-    switch(buttonIconType) {
+const Button: FC<IState> = ({ buttonSrc, buttonType = ButtonType.Add, text, applyClass, onClickFunction }) => {
+    switch(buttonType) {
         case 'add':
             return (
                 <button onClick={onClickFunction} className='bg-white grid place-content-center hover:opacity-50 rounded-[10px] text-black h-[44px] w-[44px] focus:ring'>
@@ -25,15 +28,17 @@ const ButtonIcon: FC<IState> = ({ buttonIconSrc, buttonIconType = ButtonIconType
         case 'custom':
             return (
                 <button onClick={onClickFunction} className='bg-white grid place-content-center hover:bg-grey-default text-black h-[44px] w-[44px] rounded-full focus:ring'>
-                    <Image imageSrc={buttonIconSrc}  />
+                    <Image imageSrc={buttonSrc}  />
                 </button>
             );
         default:
             return (
-                <>Masukkin type coy</>
+                <button className={`bg-white grid place-content-center h-[40px] w-[140px] rounded-full focus:ring ${applyClass}`} onClick={onClickFunction}>
+                    {text}
+                </button>
             )
     }
 
 }
 
-export default ButtonIcon;
+export default Button;

@@ -4,10 +4,10 @@ import { useStore } from '../../store/todoStore';
 
 import Text from "./../atoms/Text";
 import Checkbox from "./../atoms/Checkbox";
-import ButtonIcon from "./../molecules/ButtonIcon"
+import Button from "../molecules/Button"
 
 import { TextType } from "./../atoms/Text";
-import { ButtonIconType } from "./../molecules/ButtonIcon";
+import { ButtonType } from "../molecules/Button";
 
 import TrashIcon from "./../../assets/icon/trash-icon.svg";
 import EditIcon from "./../../assets/icon/edit-icon.svg";
@@ -47,12 +47,12 @@ const TodoCard: FC<IState> = ({ id, title, description, isDone }) => {
                     isChecked={isDone} 
                     onClickFunction={checkboxHandler} /> 
                 <div className="flex gap-[15px]">
-                    <ButtonIcon 
-                        buttonIconSrc={TrashIcon} 
-                        buttonIconType={ButtonIconType.Custom} onClickFunction={removeHandler} />
-                    <ButtonIcon 
-                        buttonIconSrc={EditIcon} 
-                        buttonIconType={ButtonIconType.Custom} />
+                    <Button 
+                        buttonSrc={TrashIcon} 
+                        buttonType={ButtonType.Custom} onClickFunction={removeHandler} />
+                    <Button 
+                        buttonSrc={EditIcon} 
+                        buttonType={ButtonType.Custom} />
                 </div>
             </div>
         </div>
