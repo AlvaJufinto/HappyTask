@@ -18,7 +18,7 @@ function createWindow() {
                 symbolColor: '#000',
                 height: 60
         },
-        icon: path.join(__dirname, '/icon-2.png'),
+        icon: path.join(__dirname, '/favicon.png'),
         
         
     });

@@ -1,9 +1,10 @@
 {
-  "name": "react-ts-todo",
+  "name": "HappyTask",
   "version": "0.1.0",
   "private": true,
   "main": "public/electron.js",
   "description": "hadeh cok",
+  "author": "HappyCost",
   "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -72,6 +73,9 @@
     ],
     "directories": {
       "buildResources": "assets"
-    }
+    },
+    "win": {
+     "icon": "build/favicon.ico"
+   }
   }
 }
