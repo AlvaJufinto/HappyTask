@@ -4,7 +4,7 @@ import { useStore } from "./store/todoStore";
 
 import Home from "./pages/Home";
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,

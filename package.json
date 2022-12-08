@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "main": "public/electron.js",
-  "description": "hadeh cok",
-  "author": "HappyCost",
+  "description": "HappyCost App",
+  "author": "HappyCost Devs",
   "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -34,10 +34,7 @@
     "eject": "react-scripts eject",
     "electron:start": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\"",
     "electron:build": "npm run build-electron && electron-builder build --publish never",
-    "electron:build:all": "npm run build-electron && electron-builder build --publish never -mwl",
-    "electron-dev": "concurrently \"SET BROWSER=none&&npm run start\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron-pack": "build --em.main=build/electron.js",
-    "preelectron-pack": "npm build"
+    "electron:build:all": "npm run build-electron && electron-builder build --publish never -mwl"
   },
   "eslintConfig": {
     "extends": [
@@ -75,7 +72,7 @@
       "buildResources": "assets"
     },
     "win": {
-     "icon": "build/favicon.ico"
-   }
+      "icon": "build/favicon.ico"
+    }
   }
 }
