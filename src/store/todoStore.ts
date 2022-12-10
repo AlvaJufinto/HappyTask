@@ -14,6 +14,7 @@ interface TodoState {
     addTodo: (title: string, description: string) => void;
     removeTodo: (id: string) => void;
     toggleDoneState: (id: string) => void;
+    editTodo: (id: string, title: string, description: string) => void;
 }
 
 const getLocalStorage = (key: string) => JSON.parse(window.localStorage.getItem(key) as any)
@@ -65,4 +66,18 @@ export const useStore = create<TodoState>((set) => ({
             }
         });
     },
+    editTodo: (id, title, description) => {
+        set((state) => {
+            const todos = state.todos.map((todo) =>
+                todo.id === id
+                    ? ({ ...todo, title, description })
+                    : todo
+            );
+            setLocalStorage("collection", todos);
+
+            return {
+                todos
+            }
+        });
+    }
 }))
