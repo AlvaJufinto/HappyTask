@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# HappyTask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HappyTask is a Todo App built with React, TypeScript, Zustand (State Management), Tailwind CSS (Styling), and Electron (For Desktop Development). This Small Project was built to complete our Final SaaS Project Assignment 
 
-## Available Scripts
+![alt](https://media.discordapp.net/attachments/1021751620331126865/1052134004624732210/HappyTask.png?width=654&height=441)
 
-In the project directory, you can run:
 
-### `npm start`
+## Acknowledgements
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ - [Stanislaus Alva Jufinto](https://github.com/AlvaJufinto/) - Frontend Side
+ - [Zaidan Adli Anandra](https://www.linkedin.com/in/zaidanadliii/) - UI/UX Design
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+<p float="left">
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1021757798960349226/ts-logo.png" width="100" />
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1021757798259888240/node-logo.png" width="100" />
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1021757798612217927/react-logo.png" width="100" /> 
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1052130937263099984/2048px-Electron_Software_Framework_Logo.png?width=441&height=441" width="100" /> 
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1052131301450338314/1024px-Tailwind_CSS_Logo.png?width=441&height=441" width="100" /> 
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting started
+```
+  npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this app  **without** Electron :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+  npm start 
+```
+To run this app  **with** Electron :
 
-### `npm run eject`
+```
+  npm run electron:start 
+```
+To build this app (and as an Electron app) to production :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+  npm run electron:build 
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="https://cdn.discordapp.com/attachments/1021751620331126865/1052134342761123861/favicon.png" width="300" /> 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
