@@ -20,6 +20,7 @@ HappyTask is a Todo App built with React, TypeScript, Zustand (State Management)
   <img src="https://media.discordapp.net/attachments/1021751620331126865/1021757798612217927/react-logo.png" width="100" /> 
   <img src="https://media.discordapp.net/attachments/1021751620331126865/1052130937263099984/2048px-Electron_Software_Framework_Logo.png?width=441&height=441" width="100" /> 
   <img src="https://media.discordapp.net/attachments/1021751620331126865/1052131301450338314/1024px-Tailwind_CSS_Logo.png?width=441&height=441" width="100" /> 
+  <img src="https://media.discordapp.net/attachments/1021751620331126865/1052134793539747880/zustand.png" width="100" /> 
 </p>
 
 ## Getting started
